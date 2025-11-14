@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   get    '/about',   to: 'static_pages#about'
   get    '/contact', to: 'static_pages#contact'
   resources :monsters
+
+  get '/api/monsters', to: 'monsters#index', defaults: { format: :json }
+  get '/api/monsters/:id', to: 'monsters#show', defaults: { format: :json }
 end

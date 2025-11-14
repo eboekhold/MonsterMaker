@@ -45,3 +45,11 @@ If the test suite passes, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
+
+## API
+
+This tool offers the following endpoints:
+- `/api/monsters` -  shows all monsters in JSON format.
+- `/api/monsters/:id` -  shows a specific monster by ID in JSON format.
+
+Also check out [Beholder](https://github.com/eboekhold/beholder), the mobile-friendly companion app.
