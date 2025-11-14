@@ -172,7 +172,7 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
-    haml-rails (2.1.0)
+    haml-rails (3.0.0)
       actionpack (>= 5.1)
       activesupport (>= 5.1)
       haml (>= 4.0.6)
@@ -359,6 +359,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
+    semantic_range (3.1.0)
     shellany (0.0.1)
     simple_form (5.4.0)
       actionpack (>= 7.0)
@@ -397,14 +398,15 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webdrivers (4.7.0)
+    webdrivers (5.2.0)
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
-      selenium-webdriver (> 3.141, < 5.0)
-    webpacker (4.3.0)
-      activesupport (>= 4.2)
+      selenium-webdriver (~> 4.0)
+    webpacker (5.4.4)
+      activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     websocket (1.2.11)
     websocket-driver (0.8.0)
       base64
@@ -437,8 +439,8 @@ DEPENDENCIES
   fog-aws
   guard
   guard-rspec
-  haml-rails (~> 2.0)
-  jbuilder (~> 2.7)
+  haml-rails
+  jbuilder
   listen
   migration_data
   mini_magick
@@ -454,12 +456,12 @@ DEPENDENCIES
   spring
   spring-watcher-listen
   sprockets-rails
-  turbolinks (~> 5)
+  turbolinks
   tzinfo-data
-  uglifier (>= 1.3)
-  web-console (>= 3.3.0)
-  webdrivers (~> 4.0)
-  webpacker (~> 4.0)
+  uglifier
+  web-console
+  webdrivers (~> 5.0)
+  webpacker (~> 5.0)
   will_paginate
   win32console
 
