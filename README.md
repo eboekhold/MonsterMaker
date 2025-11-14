@@ -1,8 +1,6 @@
 # Monster Maker
 
-This is a website dedicated to the creation of Monsters in Dungeons and Dragons 5th edition.
-
-Very WIP, currently only intended for personal use. A temporary somewhat live version of this repository can be found [here](https://monstermaker.herokuapp.com/).
+A tool for creating of Monsters for Dungeons and Dragons 5th edition.
 
 ## License
 
@@ -35,6 +33,9 @@ Then set up the database:
 ```
 $ rails db:create
 $ rails db:migrate
+
+# optional:
+$ rails db:seed
 ```
 Finally, run the test suite to verify that everything is working correctly:
 ```
@@ -44,28 +45,3 @@ If the test suite passes, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
-
-<!--
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
--->
