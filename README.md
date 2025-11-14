@@ -8,7 +8,7 @@ All source code is available under the GNU General Public License. See [LICENSE]
 
 ## Dependencies
 
-* Ruby (and Bundler) 2.6.5
+* Ruby (and Bundler) 3.4.7
 * PostgreSQL
 * Node.js 11
 * Yarn

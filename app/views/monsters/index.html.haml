@@ -12,6 +12,6 @@
         %td= link_to monster.name, monster
         %td= monster.type
         %td= monster.challenge
-        %td= monster.user&.username
+        %td= monster.author&.username
 %br/
 = link_to 'Create Monster', new_monster_path, class: "btn btn-primary"

@@ -1,8 +1,7 @@
 class Monster < ApplicationRecord
   self.inheritance_column = :_type
 
-  belongs_to :user, optional: true
-  alias_attribute :author, :user
+  belongs_to :author, class_name: "User", foreign_key: 'user_id', optional: true
   has_many :traits
   has_many :actions
   has_many :reactions

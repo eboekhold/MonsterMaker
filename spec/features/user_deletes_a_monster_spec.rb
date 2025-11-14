@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature "User deletes a monster" do
   let(:user) { create(:user) }
-  let(:monster) { create(:monster, user: user) }
+  let(:monster) { create(:monster, author: user) }
 
   scenario "they are notified the action was a success" do
     sign_in user
