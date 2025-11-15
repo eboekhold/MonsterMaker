@@ -8,17 +8,10 @@ All source code is available under the GNU General Public License. See [LICENSE]
 
 ## Dependencies
 
-* Ruby (and Bundler) 2.6.5
+* Ruby (and Bundler) 3.4.7
 * PostgreSQL
-* Node.js 11
+* Node.js 24
 * Yarn
-
-### Things that might get the legacy code working
-* libpq-dev (at least on ubuntu)
-* python3*
-* python3-venv*
-* python3-pip*
-* python 2.7 (somehow)
 
 *can probably be skipped but who knows
 

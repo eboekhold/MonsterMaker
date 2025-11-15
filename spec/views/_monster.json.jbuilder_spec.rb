@@ -7,7 +7,7 @@ describe "monsters/show.json" do
     let(:user) { build(:user, username: "User123", email: email, created_at: time, updated_at: time) }
 
     it "does not display their email" do
-      assign(:monster, create(:monster, user: user))
+      assign(:monster, create(:monster, author: user))
       
       render
 
@@ -15,7 +15,7 @@ describe "monsters/show.json" do
     end
 
     it "does not display when the account was created or updated" do
-      assign(:monster, create(:monster, user: user))
+      assign(:monster, create(:monster, author: user))
       
       render
 
@@ -23,7 +23,7 @@ describe "monsters/show.json" do
     end
 
     it "displays their username" do
-      assign(:monster, create(:monster, user: user))
+      assign(:monster, create(:monster, author: user))
 
       render
 
