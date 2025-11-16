@@ -8,13 +8,13 @@
   .top-stats
     .property-line
       %h4 Armor Class
-      = "#{@monster.armorClass} (#{@monster.armorSource})"
+      = "#{@monster.armorClass}" + (@monster.armorSource.present? ? "(#{@monster.armorSource})" : '')
     .property-line
       %h4 Hit Points
       = "#{@monster.hitPoints} (#{@monster.hitDice})"
     .property-line
       %h4 Speed
-      = @monster.speed
+      = @monster.speed || '-'
 
     = render "tapered_rule"
 
@@ -36,41 +36,51 @@
 
     = render "tapered_rule"
 
-    .property-line
-      %h4 Saving Throws
-      = @monster.savingThrows
-    .property-line
-      %h4 Skills
-      = @monster.skills
-    .property-line
-      %h4 Damage Vulnerabilities
-      = @monster.damageVulnerabilities
-    .property-line
-      %h4 Damage Resistances
-      = @monster.damageResistances
-    .property-line
-      %h4 Damage Immunities
-      = @monster.damageImmunities
-    .property-line
-      %h4 Condition Immunities
-      = @monster.conditionImmunities
+    - if @monster.savingThrows.present?
+      .property-line
+        %h4 Saving Throws
+        = @monster.savingThrows
+    - if @monster.skills.present?
+      .property-line
+        %h4 Skills
+        = @monster.skills
+    - if @monster.damageVulnerabilities.present?
+      .property-line
+        %h4 Damage Vulnerabilities
+        = @monster.damageVulnerabilities
+    - if @monster.damageResistances.present?
+      .property-line
+        %h4 Damage Resistances
+        = @monster.damageResistances
+    - if @monster.damageImmunities.present?
+      .property-line
+        %h4 Damage Immunities
+        = @monster.damageImmunities
+    - if @monster.conditionImmunities.present?
+      .property-line
+        %h4 Condition Immunities
+        = @monster.conditionImmunities
     .property-line
       %h4 Senses
-      = @monster.senses
+      = @monster.senses || '-'
     .property-line
       %h4 Languages
-      = @monster.languages
+      = @monster.languages || '-'
     .property-line
       %h4 Challenge
-      = @monster.challenge
+      = @monster.challenge || '-'
     
     = render "tapered_rule"
 
-  = render @monster.traits
+  - if @monster.traits.any?
+    %h3 Traits
+    = render @monster.traits
 
-  %h3 Actions
-  = render @monster.actions
+  - if @monster.actions.any?
+    %h3 Actions
+    = render @monster.actions
 
-  %h3 Reactions
-  = render @monster.reactions
+  - if @monster.reactions.any?
+    %h3 Reactions
+    = render @monster.reactions
   
