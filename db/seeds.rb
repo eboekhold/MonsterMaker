@@ -3,9 +3,16 @@ Rails.application.reload_routes_unless_loaded
 
 require 'factory_bot'
 
-user = User.create(email: "email@website.com", username: "username", password: "password")
-user.confirm
+user1 = User.create(email: "email@website.com", username: "user1", password: "password")
+user1.confirm
 
-50.times do
-  FactoryBot.create(:monster, author: user)
+user2 = User.create(email: "two@website.com", username: "user2", password: "password")
+user2.confirm
+
+20.times do
+  FactoryBot.create(:monster, :populated, author: user1)
+end
+
+20.times do
+  FactoryBot.create(:monster, :populated, author: user2)
 end
